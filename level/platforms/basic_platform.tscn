@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds4jyxc7rjmia"]
+
+[ext_resource type="Script" path="res://level/platforms/Platform.cs" id="1_cfkmb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fiqpi"]
+size = Vector2(68, 10)
+
+[node name="BasicPlatform" type="StaticBody2D"]
+collision_mask = 0
+script = ExtResource("1_cfkmb")
+LeftPoint = Vector2(0, 0)
+RightPoint = Vector2(68, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.33, 0.1815, 0, 1)
+polygon = PackedVector2Array(0, 0, 68, 0, 64, 20, 55, 11, 48, 19, 42, 13, 23, 26, 14, 8, 3, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(34, 5)
+shape = SubResource("RectangleShape2D_fiqpi")

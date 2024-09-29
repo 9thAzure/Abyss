@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg427t6y0ywnp"]
+
+[ext_resource type="Script" path="res://player/Player.cs" id="1_hp7gh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elv1t"]
+size = Vector2(12, 24)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(0, 1)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_hp7gh")
+MaxSpeed = 100.0
+Acceleration = 1000.0
+HeightCurve = 1
+MaxHeightTime = 0.5
+MaxHeight = 75.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_elv1t")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(0, -13)
+color = Color(0.953, 1, 0.53, 1)
+polygon = PackedVector2Array(0, -13, 3, -3, 13, 0, 3, 4, 0, 13, -3, 4, -13, 0, -3, -3)
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://21q8awmiovtf"]
+
+[ext_resource type="Script" path="res://level/generator/Generator.cs" id="1_0x35l"]
+
+[node name="Generator" type="Node"]
+script = ExtResource("1_0x35l")
